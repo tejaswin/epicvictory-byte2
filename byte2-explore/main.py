@@ -31,7 +31,7 @@ API_KEY = 'AIzaSyBD7zhc6k32EkCO52lYUCpxa3CvoeffnNU'
 service = build('fusiontables', 'v1', developerKey=API_KEY)
 
 # This is the table id for the fusion table
-TABLE_ID = '11n5PXVs4DFdkq6NP9shRb2_B22wGUU8B4v92HJxR'
+TABLE_ID = '13wX-LxcnxsX15SJ9YiD3ueQ9eXRYplKBy8XYTXKR'
 
 # This is the default columns for the query
 query_cols = []
@@ -71,7 +71,7 @@ def make_query(cols, values, limit):
     string_values = string_values[2:len(string_values)]
     
     #Change this query to have your corresponding column (in our soccer example, the column for our WHERE is Scorer).
-    query = "SELECT " + string_cols + " FROM " + TABLE_ID + "  WHERE income_household_100000_149999>0 order by income_household_100000_149999 "
+    query = "SELECT " + string_cols + " FROM " + TABLE_ID + "  WHERE income_household_100000_149999>0 order by income_household_100000_149999 DESC"
 
     query = query + " LIMIT " + str(limit)
 
